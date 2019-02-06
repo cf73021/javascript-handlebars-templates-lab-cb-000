@@ -31,7 +31,7 @@ function getRecipeVals(){
   var ingredients = [];
   for (var i=0;i<ingredientNodes.length;i++){
     if(ingredientNodes[i].value !== "") {
-      ingredients.push)ingredientNodes[i].value);
+      ingredients.push(ingredientNodes[i].value);
     }
   }
   var name = document.getElementById("name").value;
