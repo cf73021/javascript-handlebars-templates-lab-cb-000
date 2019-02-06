@@ -45,8 +45,13 @@ function handlebarsSetup() {
     return new Handlebars.SafeString('<li name="ingredientsList">' + ingredient + '</li>')
   })
   Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML)
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML)
 }
 
+function initForm(){
+  var template = Handlebars.compile(document.getElementById("recipe-form-template").innerHTML);
+  document.getElementById("main").innerHTML = template({'submitAction' : 'createRecipe()'})
+}
 function init() {
   handlebarsSetup();
   initForm();
