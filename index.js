@@ -13,8 +13,8 @@ function createRecipe() {
 }
 
  function displayEditForm() {
-  var name = document.getElementById("nameHeader").innerHTML; 
-  var description = document.getElementById("recipeDescription").innerHTML; 
+  var name = document.getElementById("nameHeader").innerHTML;
+  var description = document.getElementById("recipeDescription").innerHTML;
   var ingredientNodes = document.getElementsByName("ingredientsList");
   var ingredients = [];
   for (var i=0;i<ingredientNodes.length;i++) {
@@ -32,9 +32,9 @@ function createRecipe() {
   for (var i=0;i<ingredientNodes.length;i++) {
     if(ingredientNodes[i].value !== "") {
       ingredients.push(ingredientNodes[i].value);
-    } 
+    }
   }
-  var name = document.getElementById("name").value; 
+  var name = document.getElementById("name").value;
   var description = document.getElementById("description").value;
   var recipe = {name, ingredients, description};
   return recipe;
