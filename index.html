@@ -8,6 +8,14 @@
   </head>
   <body>
     <main id="main">
+      <script id="recipe-template" type="text/x-handlebars-template">
+        <article>
+          <header><h2 id="nameHeader">{{name}}</h2></header>
+          <div>{{> recipeDetailsPartial }}</div>
+          <footer><a href="#" onclick="displayEditForm();">Edit Recipe</a></footer>
+        </article>
+      </script>
+
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
