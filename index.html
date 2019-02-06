@@ -34,6 +34,11 @@
       <script id="recipe-form-partial" type="text/x-handlebars-template">
         Name: <input type="text" id="name" value="{{ name }}"><br>
         Description: <input type="textarea" id="description" value="{{ description }}"><br>
+        Ingredients: <br>
+        {{#each ingredients}}
+          <input type="text" name="ingredients" value="{{ this }}"><br>
+        {{else}}
+          <input type="text" name="ingredients"><br>
 
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
