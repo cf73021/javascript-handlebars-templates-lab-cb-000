@@ -16,6 +16,15 @@
         </article>
       </script>
 
+      <script id="recipe-details-partial" type="text/x-handlebars-template">
+        <p id="recipeDescription">{{ description }}</p>
+        <ul>
+          {{#each ingredients}}
+          {{displayIngredients this}}
+          {{/each}}
+        </ul>
+      </script>
+
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
